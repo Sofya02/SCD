@@ -5,6 +5,7 @@
         <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900'
         rel='stylesheet' type='text/css'>
         <link href="style.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="create_profile.css" rel="stylesheet" type="text/css" media="all" />
         <title>Дневник тренера по плаванию"</title>
     </head>
     <body>
@@ -25,11 +26,37 @@
               </nav>
             </div>
           </header>
+              
           <div class="main">
             <div class="container">
               <a href="index.html"><img src = "icons/back_arrow.png" class="back_arrow"></a> 
+
+          <form class="guruweba_example_form" name="feedback" method="POST" action="/feedback.php">
+            <div class="guruweba_example_caption">Создать профиль пловца</div>
+            <div>ФИО</div>
+            <input type="text" name="name" required="required">
+            <div class="radio">
+              <span>Пол</span>
+              <label>
+                <input type="radio" name="sex" value="мужской">мужской
+                <div class="radio-control male"></div>
+              </label>
+              <label>
+                <input type="radio" name="sex" value="женский">женский
+                <div class="radio-control female"></div>
+              </label>
+            </div>
+            <div>
+            <input type="submit" name="submit_btn" value="Сохранить">
+          </form>
+
             </div>
           </div>
+
+
+
+           
+       
           <footer>
             <div class="container">
               
