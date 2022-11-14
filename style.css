@@ -28,12 +28,13 @@ body{
 .navbar-logo 
 {
   display: inline-block;
+  margin-left: 90px;
 }
 
 h1
 {
   margin-top:-115px;
-  margin-left: 170px;
+  margin-left: 180px;
   color:#fff;
   font-family: 'Montserrat', sans-serif;
 }
@@ -51,6 +52,7 @@ h2
   margin: 0px;
   padding: 0;
   float: right;
+  margin-left: 325px;
 }
 .menu-main li {display: inline-block;}
 .menu-main a {
