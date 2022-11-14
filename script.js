@@ -53,3 +53,9 @@ function Complete()
             let a=document.getElementById('s1').value;
             alert(a); // "msk", если выбрана Москва
             }
+
+
+            function check()
+{ 
+  document.getElementById('t1').value= "1";
+}
