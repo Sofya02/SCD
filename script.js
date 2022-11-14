@@ -46,3 +46,10 @@ function Complete()
                 document.Test1.Sex[0].click();
             }
         }
+
+
+
+        function f(){
+            let a=document.getElementById('s1').value;
+            alert(a); // "msk", если выбрана Москва
+            }

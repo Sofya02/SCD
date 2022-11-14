@@ -27,7 +27,7 @@
             </div>
           </header>
 
-         <div class="main">
+          <div class="main">
             <div class="container">
               <a href="index.html"><img src = "icons/back_arrow.png" class="back_arrow"></a> 
 
@@ -37,25 +37,26 @@
                         <FORM NAME="Sel1">
                             <!-- Анкета -->
                             <TABLE>
-                                <TR>
-                                  <TD>
-                                    <B>Фамилия:<B>
-                                  </TD>
-                                  <TD>
-                                    <INPUT NAME="Family" SIZE=40 onBlur="this.value=this.value.toUpperCase()">
-                                  </TD>
-                                </TR>
-                                <TR><TD><B>Имя:<B></TD>
-                                    <TD><INPUT NAME="Name" SIZE=40
-                                          onBlur="this.value=this.value.toUpperCase()"></TD></TR>
-                                          <TR><TD><B>Отчетсво:<B></TD>
-                                            <TD><INPUT NAME="Patronymic" SIZE=40
-                                                  onBlur="this.value=this.value.toUpperCase()"></TD></TR>
-                                <TR><TD><B>Год рождения:<B></TD>
-                                    <TD><INPUT NAME="year" SIZE=10
-                                          onBlur="this.value=CheckAge(this.value)"
-                                          onFocus="this.select()"></TD></TR>
+                               <TR><TD><B>Дисциплина<B></TD>
+                                <TD><select name="town" id="s1">
+                                  <option value="msk">Вольный стиль</option>
+                                  <option value="spb">На спине</option>
+                                  <option value="other">Брасс</option>
+                                  <option value="spb1">Баттерфляй</option>
+                                  <option value="other2">Брасс</option>
+                                  <option value="other3"> Комплексное плавание</option>
+                                  </select>
+                               </TD></TR>
 
+                               <TR><TD><B>Бассейн<B></TD>
+                                <TD><select name="town" id="s1">
+                                  <option value="msk">25</option>
+                                  <option value="spb">50</option>
+                                  </select>
+                               </TD></TR>
+                               
+
+                               
                                           <TR><TD><B>Пол:<B></TD>
                                             <TD><INPUT TYPE="RADIO"  NAME="Sex" VALUE ="Man" CHECKED>Мужской
                                               <INPUT TYPE="RADIO"  NAME="Sex" VALUE ="Woman">Женский
