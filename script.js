@@ -25,6 +25,7 @@ function Complete()
                 "\nИмя: " + document.Sel1.Name.value +
                 "\nОтчество: " + document.Sel1.Patronymic.value +
                 "\nГод рождения: " + document.Sel1.year.value +
+                "\nПол: " + document.Sel1.Sex.value +
                 "\nТелефон: " + document.Sel1.Phone.value +
                 "\nГород: " + document.Sel1.city.value;
             alert(Elem);

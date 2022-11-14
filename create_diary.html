@@ -31,7 +31,7 @@
             <div class="container">
               <a href="index.html"><img src = "icons/back_arrow.png" class="back_arrow"></a> 
 
-                    <div class="anketa"><H2>Создать пловца</H2>
+                    <div class="anketa"><H2>Создать журнал</H2>
 
                       <div class="form_anketa">
                         <FORM NAME="Sel1">
@@ -58,21 +58,29 @@
                                
 
                                
-                                          <TR><TD><B>Пол:<B></TD>
-                                            <TD><INPUT TYPE="RADIO"  NAME="Sex" VALUE ="Man" CHECKED>Мужской
-                                              <INPUT TYPE="RADIO"  NAME="Sex" VALUE ="Woman">Женский
-                                          </TD>
-                                              </TR>
+                                <TR><TD><B>Пол:<B></TD>
+                                  <TD><INPUT TYPE="RADIO"  NAME="Sex" VALUE ="Man" CHECKED>Мужской
+                                    <INPUT TYPE="RADIO"  NAME="Sex" VALUE ="Woman">Женский
+                                </TD>
+                                    </TR>
 
-                                <TR><TD><B>Телефон:<B></TD>
-                                    <TD><INPUT NAME="Phone" SIZE=40></TD></TR>
+                                    <TR><TD><B>Количество тренировок<B></TD>
+                                      <TD>
+                                      <select id="menu1" onchange="1">
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                      </select>
+                                     </TD></TR>
 
-
-                                      <TR><TD><B>Город:<B></TD>
-                                        <TD><INPUT NAME="city" SIZE=40></TD></TR>
                                 
-<!-- Кнопки готовности и сброса -->
-<TD><INPUT TYPE="button" VALUE="Сохранить" onClick="Complete();"></TD>
+                              <!-- Кнопки готовности и сброса -->
+                              <TD><INPUT TYPE="button" VALUE="Создать журнал" onClick="Complete();"></TD>
                             </TABLE>
                             
                   
