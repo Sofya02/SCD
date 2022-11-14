@@ -37,6 +37,15 @@ h1
   color:#fff;
   font-family: 'Montserrat', sans-serif;
 }
+
+h2
+{
+  margin-top:-90px;
+  margin-left: 150px;
+  color:rgb(0, 33, 134);
+  font-family: 'Montserrat', sans-serif;
+}
+
 .menu-main {
   list-style: none;
   margin: 0px;
@@ -84,6 +93,7 @@ h1
   height: 800px;
   left: 210px;
   top: -2px;
+  z-index: -1000;
   mix-blend-mode: color-burn;
   filter: alpha(Opacity=20); /* Полупрозрачность для IE */
   opacity: 0.20; /* Полупрозрачность для других браузеров */ 

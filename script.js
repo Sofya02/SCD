@@ -17,3 +17,32 @@ esle
 }
 }
 intS = setInterval(scrollToEndPage,100);
+
+
+function Complete()
+        {
+            var Elem="Фамилия: " + document.Sel1.Family.value +
+                "\nИмя: " + document.Sel1.Name.value +
+                "\nОтчество: " + document.Sel1.Patronymic.value +
+                "\nГод рождения: " + document.Sel1.year.value +
+                "\nТелефон: " + document.Sel1.Phone.value +
+                "\nГород: " + document.Sel1.city.value;
+            alert(Elem);
+        }
+        function CheckAge(year)
+        {
+            if(year<2020&&year>1900)
+                return year;
+            else
+                return  false;
+        }
+
+
+        function btnClick()
+        {
+            if(document.Test1.Sex[0].checked){
+                document.Test1.Sex[1].click();
+            }else{
+                document.Test1.Sex[0].click();
+            }
+        }

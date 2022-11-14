@@ -2,6 +2,7 @@
 <html>
         <head>
         <meta charset="utf-8">
+        <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
         <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900'
         rel='stylesheet' type='text/css'>
         <link href="style.css" rel="stylesheet" type="text/css" media="all" />
@@ -9,7 +10,7 @@
         <title>Дневник тренера по плаванию"</title>
     </head>
     <body>
-        <img src = "icons/swimming.png" class = "swimmer">
+      <img src = "icons/swimming.png" class = "swimmer">
         <header>
             <div class="container">
               <nav class="top-menu">
@@ -20,7 +21,7 @@
                 <ul class="menu-main">
                   <li><a href="index.html">Главная</a></li>
                   <li><a href="create_diary.html">Создать журнал</a></li>
-                  <li><a href="create_profile_swimmer.html">Создать профиль пловца</a></li>
+                  <li><a href="create_profile_swimmer.html">Создать пловца</a></li>
                   <li><a href="list_of_swimmers.html">Список пловцов</a></li>
                 </ul>
               </nav>
@@ -31,27 +32,58 @@
             <div class="container">
               <a href="index.html"><img src = "icons/back_arrow.png" class="back_arrow"></a> 
 
-          <form class="guruweba_example_form" name="feedback" method="POST" action="/feedback.php">
-            <div class="guruweba_example_caption">Создать профиль пловца</div>
-            <div>ФИО</div>
-            <input type="text" name="name" required="required">
-            <div class="radio">
-              <span>Пол</span>
-              <label>
-                <input type="radio" name="sex" value="мужской">мужской
-                <div class="radio-control male"></div>
-              </label>
-              <label>
-                <input type="radio" name="sex" value="женский">женский
-                <div class="radio-control female"></div>
-              </label>
-            </div>
-            <div>
-            <input type="submit" name="submit_btn" value="Сохранить">
-          </form>
+                    <div class="anketa"><H2>Создать пловца</H2>
+
+                      <div class="form_anketa">
+                        <FORM NAME="Sel1">
+                            <!-- Анкета -->
+                            <TABLE>
+                                <TR>
+                                  <TD>
+                                    <B>Фамилия:<B>
+                                  </TD>
+                                  <TD>
+                                    <INPUT NAME="Family" SIZE=40 onBlur="this.value=this.value.toUpperCase()">
+                                  </TD>
+                                </TR>
+                                <TR><TD><B>Имя:<B></TD>
+                                    <TD><INPUT NAME="Name" SIZE=40
+                                          onBlur="this.value=this.value.toUpperCase()"></TD></TR>
+                                          <TR><TD><B>Отчетсво:<B></TD>
+                                            <TD><INPUT NAME="Patronymic" SIZE=40
+                                                  onBlur="this.value=this.value.toUpperCase()"></TD></TR>
+                                <TR><TD><B>Год рождения:<B></TD>
+                                    <TD><INPUT NAME="year" SIZE=10
+                                          onBlur="this.value=CheckAge(this.value)"
+                                          onFocus="this.select()"></TD></TR>
+
+                                          <TR><TD><B>Пол:<B></TD>
+                                            <TD><INPUT TYPE="RADIO"  NAME="Sex" VALUE ="Man" CHECKED>Мужской
+                                              <INPUT TYPE="RADIO"  NAME="Sex" VALUE ="Woman">Женский
+                                          </TD>
+                                              </TR>
+
+                                <TR><TD><B>Телефон:<B></TD>
+                                    <TD><INPUT NAME="Phone" SIZE=40></TD></TR>
+
+
+                                      <TR><TD><B>Город:<B></TD>
+                                        <TD><INPUT NAME="city" SIZE=40></TD></TR>
+                                
+<!-- Кнопки готовности и сброса -->
+<TD><INPUT TYPE="button" VALUE="Сохранить" onClick="Complete();"></TD>
+                            </TABLE>
+                            
+                  
+
+                            
+                        </FORM>
+                  
+                      </div>
 
             </div>
           </div>
+</div>>
 
 
 
