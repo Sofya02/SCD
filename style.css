@@ -42,7 +42,7 @@ h1
 h2
 {
   margin-top:-90px;
-  margin-left: 150px;
+  margin-left: 110px;
   color:rgb(0, 33, 134);
   font-family: 'Montserrat', sans-serif;
 }
@@ -92,7 +92,7 @@ h2
 
   position: absolute;
   width: 1080px;
-  height: 800px;
+  height: 750px;
   left: 210px;
   top: -2px;
   z-index: -1000;
