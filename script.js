@@ -67,3 +67,6 @@ function check()
 
 
 
+$(function() {
+    $( "#datepicker" ).datepicker({dateFormat: 'yy'});
+});​
