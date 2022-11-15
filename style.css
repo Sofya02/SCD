@@ -94,7 +94,7 @@ h2
   width: 1080px;
   height: 750px;
   left: 210px;
-  top: -2px;
+  top: -10px;
   z-index: -1000;
   mix-blend-mode: color-burn;
   filter: alpha(Opacity=20); /* Полупрозрачность для IE */
