@@ -1,5 +1,5 @@
 body{
-  background-color: #88E3E9; 
+  background-color: #88E3E9; /*#79dee7*/
  }
 
 .container {
@@ -16,7 +16,7 @@ body{
 }
 
 .top-menu {
-  background: #26C5E8;
+  background: #26C5E8;/*#5cc9e2*/
   box-shadow: 3px 0 7px rgba(0,0,0,.3);
   padding: 20px;
 }

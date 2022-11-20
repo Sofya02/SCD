@@ -73,3 +73,98 @@ $(function() {
 
 
 
+
+
+
+/*
+
+
+HTML
+ <h1>Retrieve Form Data</h1>
+
+    <form action="/" method="POST" id="form">
+        <div>
+            <label>
+                Name:
+                <input type="text" name="name" value="John Doe">
+            </label>
+        </div>
+        <div>
+            <label>
+                Age:
+                <input type="number" name="age" value="30">
+            </label>
+        </div>
+        <div>
+            <label>
+                Confirm terms of service:
+                <input type="checkbox" name="terms" checked>
+            </label>
+        </div>
+        <div>
+            Plan:
+            <select name="plan">
+                <option value="free" selected>free</option>
+                <option value="simple">simple</option>
+                <option value="pro">pro</option>
+            </select>
+        </div>
+        <div>
+            <button type="submit">Submit</button>
+        </div>
+    </form>
+
+
+
+
+
+
+
+const isCheckboxOrRadio = type => ['checkbox', 'radio'].includes(type);
+
+const {form} = document.forms;
+
+function retrieveFormValue(event) {
+    event.preventDefault();
+
+    const values = {};
+
+    for (let field of form) {
+        const {name} = field;
+
+        if (name) {
+            const {type, checked, value} = field;
+
+            values[name] = isCheckboxOrRadio(type) ? checked : value;
+        }
+    }
+
+    console.log('v6', values);
+}
+
+form.addEventListener('submit', retrieveFormValue);
+
+
+
+
+
+
+body {
+            font-family: sans-serif;
+            background-color: #ddd;
+        }
+
+        h1 {
+            margin: 16px 12px 30px;
+        }
+        
+        form div {
+            margin: 12px;
+        }
+
+        form button {
+            margin-top: 10px;
+        }
+
+
+*/

@@ -37,15 +37,15 @@
                 <TABLE>
                   <TR>
                     <TD><B>Фамилия:<B></TD>
-                    <TD><INPUT NAME="Family" SIZE=40 onBlur="this.value=this.value.toUpperCase()"></TD>
+                    <TD><INPUT NAME="Family" placeholder="Введите фамилию" SIZE=40 onBlur="this.value=this.value.toUpperCase()"></TD>
                   </TR>
                   <TR>
                     <TD><B>Имя:<B></TD>
-                    <TD><INPUT NAME="Name" SIZE=40 onBlur="this.value=this.value.toUpperCase()"></TD>
+                    <TD><INPUT NAME="Name" placeholder="Введите имя" SIZE=40 onBlur="this.value=this.value.toUpperCase()"></TD>
                   </TR>
                   <TR>
                     <TD><B>Отчетсво:<B></TD>
-                    <TD><INPUT NAME="Patronymic" SIZE=40 onBlur="this.value=this.value.toUpperCase()"></TD>
+                    <TD><INPUT NAME="Patronymic" placeholder="Введите отчество (если есть)" SIZE=40 onBlur="this.value=this.value.toUpperCase()"></TD>
                   </TR>
                   <TR>
                     <TD><B>Год рождения:<B></TD>
@@ -60,11 +60,11 @@
                   </TR>
                   <TR>
                     <TD><B>Телефон:<B></TD>
-                    <TD><INPUT NAME="Phone" SIZE=40></TD>
+                    <TD><INPUT NAME="Phone" placeholder="Введите номер телефона" SIZE=40></TD>
                   </TR>
                   <TR>
                     <TD><B>Город:<B></TD>
-                    <TD><INPUT NAME="city" SIZE=40></TD>
+                    <TD><INPUT NAME="city" placeholder="Введите город" SIZE=40></TD>
                   </TR>
                   
                   <TD><INPUT TYPE="button" VALUE="Сохранить" onClick="Complete();"></TD>
@@ -83,5 +83,8 @@
 
       </div>
     </footer>
+
+    <script src="script.js"></script>
+
   </body>
 </html>
