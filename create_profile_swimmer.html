@@ -33,48 +33,48 @@
         <a href="index.html"><img src = "icons/back_arrow.png" class="back_arrow"></a> 
           <div class="anketa"><H2>Создать пловца</H2>
             <div class="form_anketa">
-              <form action="#" method="#" id="form1">
+              <form action="#" id="form">
                 <div>
-                  <label>
+                  <label for="family">
                     Фамилия:
-                    <INPUT name="family" placeholder="Введите фамилию" SIZE=30>
+                    <INPUT type="text" name="family" id="family" placeholder="Введите фамилию" SIZE=30 autocomplete="off">
                   </label>
                 </div>
                 <div>
-                  <label>
+                  <label for="username">
                     Имя:
-                    <INPUT name="name" placeholder="Введите имя" SIZE=20></TD>
+                    <INPUT type="text" name="username" id="username" placeholder="Введите имя" SIZE=20 autocomplete="off"></TD>
                   </label>
                 </div>
                 <div>
-                  <label>
+                  <label for="patronymic">
                     Отчество:
-                    <INPUT name="patronymic" placeholder="Введите отчество" SIZE=30>
+                    <INPUT type="text" name="patronymic" id="patronymic" placeholder="Введите отчество" SIZE=30 autocomplete="off">
                   </label>
                 </div>
                 <div>
-                  <label>
+                  <label for="year">
                     Год рождения:
-                    <input name="year"type="number" min="1900" max="2099" step="1" value="2020" />
+                    <input name="year" id="year" type="number" min="1900" max="2020" step="1" value="2020" />
                   </label>
                 </div>
                 <div>
-                  <label>
+                  <label for="gender">
                     Пол:
-                    <INPUT TYPE="radio" name="Sex" VALUE ="Man" checked>Мужчина
-                      <INPUT TYPE="radio" name="Sex" VALUE ="Woman">Женщина
+                    <INPUT TYPE="radio" name="gender" id="gender" VALUE ="Man" checked>Мужчина
+                      <INPUT TYPE="radio" name="gender" id="gender" VALUE ="Woman">Женщина
                     </label>
                 </div>
                 <div>
-                  <label>
+                  <label for="phone">
                     Телефон:
-                    <INPUT name="phone" placeholder="Введите номер телефона" SIZE=20>
+                    <INPUT type="text" id="phone" name="phone" placeholder="Введите номер телефона" SIZE=20 autocomplete="off">
                   </label>
                 </div>
                 <div>
-                  <label>
+                  <label for="city">
                     Город:
-                    <INPUT name="city" placeholder="Введите город" SIZE=30>
+                    <INPUT type="text" id="city" name="city" placeholder="Введите город" SIZE=30>
                   </label>
                 </div>
                 <div>
@@ -94,63 +94,7 @@
       </div>
     </footer>
 
-    <script>
-
-            const form = document.getElementById('form1')
-
-            const formFileds = form.elements;
-
-            const submitBtn = form.querySelector('[type="submit"]');
-
-            submitBtn.addEventListener('click',clearStorage);
-
-
-
-
-            function clearStorage(){
-            localStorage.clear();
-            }
-
-            function changeHandler()
-            {
-              if(this.type!=='checkbox'){
-                console.log(this.name,this.value);
-                localStorage.setItem(this.name,this.value);
-              }else{
-                console.log(this.name,this.checked);
-                localStorage.setItem(this.name,this.checked);
-              }
-            }
-
-            function checkStorage(){
-              for(let i=0;i<formFileds.length;i++){
-                if(formFileds[i].type!='submit'){
-                  if(formFileds[i].type=='checkbox'){
-                    formFileds[i].checked=localStorage.getItem(formFileds[i].name);
-                  }else{
-                    formFileds[i].value=localStorage.getItem(formFileds[i].name);
-                  }
-                }
-              }
-              attachEvents();
-            }
-
-            function attachEvents(){
-              for(let i=0;i<formFileds.length;i++){
-                formFileds[i].addEventListener('change',changeHandler);
-              }
-            }
-
-            checkStorage();
-
-
-             window.addEventListener('storage',()=>{
-              console.log('storage has changed');
-             })
-             
-
-
-    </script>
+    <script src="script.js"></script>
 
   </body>
 </html>
