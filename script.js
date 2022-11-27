@@ -18,7 +18,7 @@ esle
 }
 intS = setInterval(scrollToEndPage,100);
 
-
+/*
 function Complete()
 {
     var Elem="Фамилия: " + document.Sel1.Family.value +
@@ -63,7 +63,7 @@ function check()
 { 
   document.getElementById('t1').value= "1";
 }
-
+*/
 
 
 
@@ -72,6 +72,31 @@ $(function() {
 });​
 
 
+
+
+const isCheckboxOrRadio = type => ['checkbox', 'radio'].includes(type);
+
+const {form} = document.forms;
+
+function retrieveFormValue(event) {
+    event.preventDefault();
+
+    const values = {};
+
+    for (let field of form) {
+        const {name} = field;
+
+        if (name) {
+            const {type, checked, value} = field;
+
+            values[name] = isCheckboxOrRadio(type) ? checked : value;
+        }
+    }
+
+    console.log('v6', values);
+}
+
+form.addEventListener('submit', retrieveFormValue);
 
 
 

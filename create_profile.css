@@ -10,10 +10,21 @@
   
 }
 
-TD
+label
 {
-  font-size: 20px;/*20px*/
-  padding-top: 20px;
+  font-size: 24px;/*20px*/
   font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+}
+
+form div {
+  margin: 12px;
+}
+
+  form button {
+  margin-top: 10px;
+  font-weight: 700;
+  padding: 10px 20px;
+  font-size: large;
 }
 

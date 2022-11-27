@@ -33,44 +33,54 @@
         <a href="index.html"><img src = "icons/back_arrow.png" class="back_arrow"></a> 
           <div class="anketa"><H2>Создать пловца</H2>
             <div class="form_anketa">
-              <FORM NAME="Sel1">
-                <TABLE>
-                  <TR>
-                    <TD><B>Фамилия:<B></TD>
-                    <TD><INPUT NAME="Family" placeholder="Введите фамилию" SIZE=40 onBlur="this.value=this.value.toUpperCase()"></TD>
-                  </TR>
-                  <TR>
-                    <TD><B>Имя:<B></TD>
-                    <TD><INPUT NAME="Name" placeholder="Введите имя" SIZE=40 onBlur="this.value=this.value.toUpperCase()"></TD>
-                  </TR>
-                  <TR>
-                    <TD><B>Отчетсво:<B></TD>
-                    <TD><INPUT NAME="Patronymic" placeholder="Введите отчество (если есть)" SIZE=40 onBlur="this.value=this.value.toUpperCase()"></TD>
-                  </TR>
-                  <TR>
-                    <TD><B>Год рождения:<B></TD>
-                     <TD><input NAME="year"type="number" min="1900" max="2099" step="1" value="2020" /></TD>
-                  </TR>
-                  <TR>
-                    <TD><B>Пол:<B></TD>
-                    <TD>
-                      <INPUT TYPE="RADIO"  NAME="Sex" VALUE ="Man" CHECKED>Мужчина
-                      <INPUT TYPE="RADIO"  NAME="Sex" VALUE ="Woman">Женщина
-                    </TD>
-                  </TR>
-                  <TR>
-                    <TD><B>Телефон:<B></TD>
-                    <TD><INPUT NAME="Phone" placeholder="Введите номер телефона" SIZE=40></TD>
-                  </TR>
-                  <TR>
-                    <TD><B>Город:<B></TD>
-                    <TD><INPUT NAME="city" placeholder="Введите город" SIZE=40></TD>
-                  </TR>
-                  
-                  <TD><INPUT TYPE="button" VALUE="Сохранить" onClick="Complete();"></TD>
-
-                </TABLE>
-            </FORM>
+              <form action="#" method="#" id="form1">
+                <div>
+                  <label>
+                    Фамилия:
+                    <INPUT name="family" placeholder="Введите фамилию" SIZE=30>
+                  </label>
+                </div>
+                <div>
+                  <label>
+                    Имя:
+                    <INPUT name="name" placeholder="Введите имя" SIZE=20></TD>
+                  </label>
+                </div>
+                <div>
+                  <label>
+                    Отчество:
+                    <INPUT name="patronymic" placeholder="Введите отчество" SIZE=30>
+                  </label>
+                </div>
+                <div>
+                  <label>
+                    Год рождения:
+                    <input name="year"type="number" min="1900" max="2099" step="1" value="2020" />
+                  </label>
+                </div>
+                <div>
+                  <label>
+                    Пол:
+                    <INPUT TYPE="radio" name="Sex" VALUE ="Man" checked>Мужчина
+                      <INPUT TYPE="radio" name="Sex" VALUE ="Woman">Женщина
+                    </label>
+                </div>
+                <div>
+                  <label>
+                    Телефон:
+                    <INPUT name="phone" placeholder="Введите номер телефона" SIZE=20>
+                  </label>
+                </div>
+                <div>
+                  <label>
+                    Город:
+                    <INPUT name="city" placeholder="Введите город" SIZE=30>
+                  </label>
+                </div>
+                <div>
+                  <button type="submit">Отправить</button>
+                  </div>
+              </form>
           </div>
         </div>
       </div>
@@ -84,7 +94,63 @@
       </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+
+            const form = document.getElementById('form1')
+
+            const formFileds = form.elements;
+
+            const submitBtn = form.querySelector('[type="submit"]');
+
+            submitBtn.addEventListener('click',clearStorage);
+
+
+
+
+            function clearStorage(){
+            localStorage.clear();
+            }
+
+            function changeHandler()
+            {
+              if(this.type!=='checkbox'){
+                console.log(this.name,this.value);
+                localStorage.setItem(this.name,this.value);
+              }else{
+                console.log(this.name,this.checked);
+                localStorage.setItem(this.name,this.checked);
+              }
+            }
+
+            function checkStorage(){
+              for(let i=0;i<formFileds.length;i++){
+                if(formFileds[i].type!='submit'){
+                  if(formFileds[i].type=='checkbox'){
+                    formFileds[i].checked=localStorage.getItem(formFileds[i].name);
+                  }else{
+                    formFileds[i].value=localStorage.getItem(formFileds[i].name);
+                  }
+                }
+              }
+              attachEvents();
+            }
+
+            function attachEvents(){
+              for(let i=0;i<formFileds.length;i++){
+                formFileds[i].addEventListener('change',changeHandler);
+              }
+            }
+
+            checkStorage();
+
+
+             window.addEventListener('storage',()=>{
+              console.log('storage has changed');
+             })
+             
+
+
+    </script>
 
   </body>
 </html>
