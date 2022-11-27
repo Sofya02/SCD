@@ -6,6 +6,7 @@
     rel='stylesheet' type='text/css'>
     <link href="style.css" rel="stylesheet" type="text/css" media="all" />
     <link href="create_diary.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="create_profile.css" rel="stylesheet" type="text/css" media="all" />
     <title>Создать журнал</title>
   </head>
   <body>
@@ -32,87 +33,62 @@
           <a href="index.html"><img src = "icons/back_arrow.png" class="back_arrow"></a> 
           <div class="anketa"><H2>Создать журнал</H2>
             <div class="form_anketa">
-              <FORM NAME="Sel1">
-                <TABLE>
-                  <TR>
-                    <TD><B>Пол:<B></TD>
-                    <TD>
-                      <INPUT TYPE="RADIO"  NAME="Sex" VALUE ="Man" CHECKED>Мужчина
-                      <INPUT TYPE="RADIO"  NAME="Sex" VALUE ="Woman">Женщина
-                    </TD>
-                  </TR>
-                  <TR>
-                    <TD><B>Бассейн:<B></TD>
-                    <TD> 
-                    <select id="menu1" onchange="1">
+              <form action="#" id="form2">
+                <div>
+                  <label for="gender">
+                    Пол:
+                    <INPUT TYPE="radio" name="gender" id="gender" VALUE ="Man" checked><img src="icons/male-gender.png" class = "gender">
+                      <INPUT TYPE="radio" name="gender" id="gender" VALUE ="Woman"><img src="icons/female.png" class = "gender">
+                    </label>
+                </div>
+                <div>
+                  <label for="pool">
+                    Бассейн:
+                    <select id="pool" name="pool" onchange="1">
                       <option value="1">25</option>
                       <option value="2">50</option>
                     </select>
-                    </TD>
-                  </TR>
-                  <TR>
-                    <TD><B>Стиль:<B></TD>
-                    <TD>
-                      <select name="style_swim" id="s1">
-                        <option value="freestyle">Вольный стиль</option>
-                        <option value="OnTheBack">На спине</option>
-                        <option value="brass">Брасс</option>
-                        <option value="batterfly">Баттерфляй</option>
-                        <option value="complex_swim"> Комплексное плавание</option>
-                      </select>
-                    </TD>
-                  </TR>
-                  <TR>
-                    <TD><B>Дистанция:<B></TD>
-                    <TD>
-                      <select name="distance" id="s2">
-                        <option value="50">50</option>
-                        <option value="100">100</option>
-                        <option value="200">200</option>
-                        <option value="400">400</option>
-                        <option value="800">800</option>
-                        <option value="1500">1500</option>
-                      </select>
-                    </TD>
-                  </TR>
-                  <TR>
-                    <TD><B>Количество тренировок:<B></TD>
-                      <TD>
-                        <select name="count" id="s3">
-                          <option value="1_1">1</option>
-                          <option value="2_1">2</option>
-                          <option value="3_1">3</option>
-                          <option value="4">4</option>
-                          <option value="5">5</option>
-                          <option value="6">6</option>
-                          <option value="7">7</option>
-                          <option value="8">8</option>
-                          <option value="9">9</option>
-                          <option value="10">10</option>
-                          <option value="11">11</option>
-                          <option value="12">12</option>
-                          <option value="13">13</option>
-                          <option value="14">14</option>
-                          <option value="15">15</option>
-                          <option value="16">16</option>
-                          <option value="17">17</option>
-                          <option value="18">18</option>
-                          <option value="19">19</option>
-                          <option value="20">20</option>
-                        </select>
-                      </TD>
-                  </TR>
-
-                  <TD><INPUT TYPE="button" VALUE="Создать журнал" onClick="Complete();"></TD>
-
-                </TABLE>               
-              </FORM>
+                  </label>
+                </div>
+                <div>
+                  <label for="style_swim">
+                    Стиль:
+                    <select name="style_swim" id="style_swim">
+                      <option value="freestyle">Вольный стиль</option>
+                      <option value="OnTheBack">На спине</option>
+                      <option value="brass">Брасс</option>
+                      <option value="batterfly">Баттерфляй</option>
+                      <option value="complex_swim"> Комплексное плавание</option>
+                    </select>
+                  </label>
+                </div>
+                <div>
+                  <label for="distance">
+                    Дистанция:
+                    <select name="distance" id="distance">
+                      <option value="50">50</option>
+                      <option value="100">100</option>
+                      <option value="200">200</option>
+                      <option value="400">400</option>
+                      <option value="800">800</option>
+                      <option value="1500">1500</option>
+                    </select>
+                  </label>
+                </div>
+                <div>
+                  <label for="count_tr">
+                    Количество тренировок:
+                    <input name="count_tr" id="count_tr" type="number" min="5" max="20" step="1" value="5" />
+                  </label>
+                </div>
+                <div>
+                  <button type="submit">Создать</button>
+                  </div>
+              </form>
             </div>
           </div>
-          
-        
-          <!--ТАБЛИЦА-->
-          <script src="script.js"></script>
+
+    
 
 
         </div>
@@ -125,5 +101,7 @@
 
       </div>
     </footer>
+
+    <script src="diary.js"></script>
   </body>
 </html>
