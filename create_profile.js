@@ -44,7 +44,7 @@ localStorage.setItem('form', form);
 */
 
 /* Рабочий метод */
-/*const isCheckboxOrRadio = type => ['checkbox', 'radio'].includes(type);
+const isCheckboxOrRadio = type => ['checkbox', 'radio'].includes(type);
 
 const {form} = document.forms;
 
@@ -73,58 +73,4 @@ form.addEventListener('submit', getFormValue);
 window.addEventListener('storage',()=>{
     console.log('storage has changed');
    })
-*/
-
-
-   const form = document.getElementById('form1')
-
-   const formFileds = form.elements;
-
-   const submitBtn = form.querySelector('[type="submit"]');
-
-   submitBtn.addEventListener('click',clearStorage);
-
-
-
-
-   function clearStorage(){
-   localStorage.clear();
-   }
-
-   function changeHandler()
-   {
-     if(this.type!=='checkbox'){
-       console.log(this.name,this.value);
-       localStorage.setItem(this.name,this.value);
-     }else{
-       console.log(this.name,this.checked);
-       localStorage.setItem(this.name,this.checked);
-     }
-   }
-
-   function checkStorage(){
-     for(let i=0;i<formFileds.length;i++){
-       if(formFileds[i].type!='submit'){
-         if(formFileds[i].type=='checkbox'){
-           formFileds[i].checked=localStorage.getItem(formFileds[i].name);
-         }else{
-           formFileds[i].value=localStorage.getItem(formFileds[i].name);
-         }
-       }
-     }
-     attachEvents();
-   }
-
-   function attachEvents(){
-     for(let i=0;i<formFileds.length;i++){
-       formFileds[i].addEventListener('change',changeHandler);
-     }
-   }
-
-   checkStorage();
-
-
-    window.addEventListener('storage',()=>{
-     console.log('storage has changed');
-    })
 
