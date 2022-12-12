@@ -17,19 +17,21 @@ label
   font-weight: bold;
 }
 
-form div {
-  margin: 12px;
+legend
+{
+  font-size: 24px;
 }
 
-  form button {
-  margin-top: 10px;
-  font-weight: 700;
-  padding: 10px 20px;
-  font-size: large;
+form{
+  margin-left: 350px;
 }
 
 .gender
 {
   width:20px;
   height:20px;
+}
+
+.tab{
+  margin-left: 200px;
 }

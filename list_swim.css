@@ -17,7 +17,11 @@ TD
   font-family: 'Montserrat', sans-serif;
 }
 
+ol{
 
+  margin-top: 50px;
+  margin-left: 170px;
+}
 
 /* base styles  */
 html {
@@ -31,4 +35,20 @@ body {
 /* form   */
 #form {
   margin-left: 2rem;
+}
+
+table{
+  margin-left: 40px;
+  background: rgb(215, 244, 250);
+  width: 1000px;
+}
+
+
+
+tr.first {
+  
+  text-align: center;
+  color: #03031e;
+  cursor: pointer;
+
 }
