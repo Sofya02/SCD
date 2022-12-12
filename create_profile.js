@@ -96,5 +96,6 @@ document.addEventListener('DOMContentLoaded', function() {
         data.push(item);
         localStorage.setItem("localData", JSON.stringify(data));
         createTable(data, tbody);
+        
     })
     });
