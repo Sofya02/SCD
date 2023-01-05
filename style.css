@@ -108,3 +108,45 @@ h2
   width: 40px;
 }
 
+form{
+  margin-left: 350px;
+}
+
+.gender
+{
+  width:20px;
+  height:20px;
+}
+
+.tab{
+  display: none;
+}
+
+.anketa2
+{
+  margin-top:100px;
+
+}
+
+label
+{
+  font-size: 24px;/*20px*/
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+}
+
+legend
+{
+  font-size: 24px;
+}
+
+
+.anketa2
+{
+  margin-top:100px;
+  margin-left: 200;
+}
+
+
+
+

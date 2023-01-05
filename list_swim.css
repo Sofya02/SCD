@@ -43,12 +43,14 @@ table{
   width: 1000px;
 }
 
-
-
 tr.first {
   
   text-align: center;
   color: #03031e;
   cursor: pointer;
 
+}
+
+input{
+  margin-left: 900px;
 }

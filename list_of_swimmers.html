@@ -31,6 +31,7 @@ rel='stylesheet' type='text/css'>
 <div class="main">
 <div class="container">
 <a href="index.html"><img src = "icons/back_arrow.png" class="back_arrow"></a>
+<input type="text" id="inputSearch" placeholder="Search.." title="Type in a category">
 <div class="anketa"><H2>Список пловцов</H2>
 
     <table border="1" id="table">
@@ -63,7 +64,29 @@ rel='stylesheet' type='text/css'>
 
 </div>
 </footer>
-<script src="script.js"></script>
 <script src="create_profile.js"></script>
+<script>
+    
+function tableSearch() {
+    var phrase = document.getElementById('search-text');
+    var table = document.getElementById('info-table');
+    var regPhrase = new RegExp(phrase.value, 'i');
+    var flag = false;
+    for (var i = 1; i < table.rows.length; i++) {
+        flag = false;
+        for (var j = table.rows[i].cells.length - 1; j >= 0; j--) {
+            flag = regPhrase.test(table.rows[i].cells[j].innerHTML);
+            if (flag) break;
+        }
+        if (flag) {
+            table.rows[i].style.display = "";
+        } else {
+            table.rows[i].style.display = "none";
+        }
+
+    }
+}
+
+</script>
 </body>
 </html>

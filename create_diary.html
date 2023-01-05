@@ -32,105 +32,64 @@
         <div class="container">
           <a href="index.html"><img src = "icons/back_arrow.png" class="back_arrow"></a> 
           <div class="anketa"><H2>Создать журнал</H2>
-            <div class="form_anketa">
-              <form action="#" id="form2" class="form2">
-                <div>
-                  <label for="gender">
-                    Пол:
-                    <INPUT TYPE="radio" name="gender" id="gender" VALUE ="Man" checked><img src="icons/male-gender.png" class = "gender">
-                      <INPUT TYPE="radio" name="gender" id="gender" VALUE ="Woman"><img src="icons/female.png" class = "gender">
-                    </label>
-                </div>
-                <div>
-                  <label for="pool">
-                    Бассейн:
-                    <select id="pool" name="pool" onchange="1">
-                      <option value="1">25</option>
-                      <option value="2">50</option>
-                    </select>
-                  </label>
-                </div>
-                <div>
-                  <label for="style_swim">
-                    Стиль:
-                    <select name="style_swim" id="style_swim">
-                      <option value="freestyle">Вольный стиль</option>
-                      <option value="OnTheBack">На спине</option>
-                      <option value="brass">Брасс</option>
-                      <option value="batterfly">Баттерфляй</option>
-                      <option value="complex_swim"> Комплексное плавание</option>
-                    </select>
-                  </label>
-                </div>
-                <div>
-                  <label for="distance">
-                    Дистанция:
-                    <select name="distance" id="distance">
-                      <option value="50">50</option>
-                      <option value="100">100</option>
-                      <option value="200">200</option>
-                      <option value="400">400</option>
-                      <option value="800">800</option>
-                      <option value="1500">1500</option>
-                    </select>
-                  </label>  
-                </div>
-                <div>
-                  <label for="count_tr">
-                    Количество тренировок:
-                    <input name="count_tr" id="count_tr" type="number" min="5" max="20" step="1" value="5" />
-                  </label>
-                </div>
-                <div>
-                  <button type="submit">Создать</button>
-                  </div>
-              </form>
-            </div>
+           
+                <form name="diary" action="index.html">
+                    <table>
+                      <tr>
+                        <td><label for="gender">Пол:</label></td>
+                        <td><input TYPE="radio" name="gender" id="gender" VALUE ="Мужчины" checked><img src="icons/male-gender.png" class = "gender">
+                          <input TYPE="radio" name="gender" id="gender" VALUE ="Женщины"><img src="icons/female.png" class = "gender"></td>
+                      </tr>
+                      <tr>
+                        <td><label for="pool">Бассейн:</label></td>
+                        <td>
+                          <input TYPE="radio" name="pool" id="pool"  size="30"  VALUE ="25" checked>25
+                          <input TYPE="radio" name="pool" id="pool"  size="30"  VALUE ="50">50
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><label for="distance">Дистанция:</label></td>
+                        <td>
+                          <input TYPE="radio" name="distance" id="distance"  size="30"  VALUE ="50" checked>50
+                          <input TYPE="radio" name="distance" id="distance"  size="30"  VALUE ="100">100
+                          <input TYPE="radio" name="distance" id="distance"  size="30"  VALUE ="200">200
+                          <input TYPE="radio" name="distance" id="distance"  size="30"  VALUE ="400">400
+                          <input TYPE="radio" name="distance" id="distance"  size="30"  VALUE ="800">800
+                          <input TYPE="radio" name="distance" id="distance"  size="30"  VALUE ="1500">1500
+                        </td>
+                      </tr>
+                      <tr>
+                         <td><label for="style_swim">Стиль:</label></td>
+                         <td>
+                          <input TYPE="radio" name="style_swim" id="style_swim"  size="30"  VALUE ="Вольный стиль" checked>Вольный стиль
+                          <input TYPE="radio" name="style_swim" id="style_swim"  size="30"  VALUE ="На спине">На спине
+                          <input TYPE="radio" name="style_swim" id="style_swim"  size="30"  VALUE ="Брасс">Брасс
+                          <input TYPE="radio" name="style_swim" id="style_swim"  size="30"  VALUE ="Баттерфляй">Баттерфляй
+                          <input TYPE="radio" name="style_swim" id="style_swim"  size="30"  VALUE ="Комплексное плавание">Комплексное плавание
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <input type="submit" name="submit" value="Создать" />
+                        </td>
+                      </tr>
+                    </table>
+               
+                  </form>
+          
           </div>
 
-          <!--Таблица -->
-
-          <table>
-            <caption>Здесь должно быть название</caption> 
-            <tr>
-              <td rowspan="2"  class="want">№</td>
-              <td rowspan="2"  class="want">ФИО спортсмена</td>
-              <td rowspan="2"  class="want">Год</td>
-              <td rowspan="2"  class="want">Старый результат</td>
-              <td colspan = "7"  class="want">Тренировки</td> <!--rowspan="2"-->
-              <td rowspan="2"  class="want">Лучший результат</td>
-              <td rowspan="2"  class="want">Стабильность</td>
-              <td rowspan="2"  class="want">Прогресс</td>
-              <td rowspan="2"  class="want">Шанс</td>
+          <div class="tab">
+          <table border="1" id="table2">
+            <tr class="first">
+            <td>Пол</td>
+             <td>Бассейн</td>
+             <td>Дистанция</td>
+             <td>Стиль</td>
             </tr>
-            <tr>
-                <td>12:11</td>
-                <td>12:11</td>
-                <td>12:11</td>
-                <td>12:11</td>
-                <td>12:11</td>
-                <td>12:11</td>
-                <td>12:11</td>
-            </tr>
-            <tr>
-              <td>1</td>
-              <td>осущшу щосщзусу щовзщув</td>
-              <td>11:11</td>
-              <td>11:11</td>
-              <td>11:11</td>
-              <td>11:11</td>
-              <td>11:11</td>
-              <td>11:11</td>
-              <td>11:11</td>
-              <td>11:11</td>
-              <td>11:11</td>
-              <td>11:11</td>
-              <td>11:11</td>
-              <td>11:11</td>
-              <td>11:11</td>
-            </tr>
-          </table>
-
+            <tbody id="tablebody2"></tbody>
+           </table>
+          </div>
         </div>
       </div>
 
@@ -143,5 +102,6 @@
     </footer>
 
     <script src="diary.js"></script>
+    <script src="listDiaries.js"></script>
   </body>
 </html>
