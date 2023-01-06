@@ -1,23 +1,3 @@
-/*var div = document.getElementById('list');
-var ul = document.createElement('ul');
-
-div.appendChild(ul);
-
-var gender = localStorage.getItem('[name = "gender"]');
-var pool = localStorage.getItem('[name = "pool"]');
-var style_swim = localStorage.getItem('[name = "style_swim"]');
-var distance = localStorage.getItem('[name = "distance"]');
-var str = document.writeln( gender + " Бассейн " + pool + "м, " + distance + "м " + style_swim);
-
-var data = [str, "Вторая строка", "n строка"];
-
-for (var i = 0, ln = data.length; i < ln; i++) {
-  var li = document.createElement('li');
-  li.innerHTML = data[i];
-  ul.appendChild(li);
-}*/
-
-
 //выбираем элементы dom для манипуляций
 var input = document.querySelector("input[type = 'text']");
 var ul = document.querySelector("ul");
@@ -62,6 +42,5 @@ saveBtn.addEventListener('click',function(){
 
 //загружаем список
 loadTodo();
-
 
 
