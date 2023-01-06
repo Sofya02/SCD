@@ -39,8 +39,9 @@ body {
 
 table{
   margin-left: 40px;
-  background: rgb(215, 244, 250);
+  background:#fcfcfc;
   width: 1000px;
+  text-align: center;
 }
 
 tr.first {

@@ -41,62 +41,15 @@
             
             <input type = "text" placeholder="Создайте журнал (пример: Мужчины Бассейн 25м, 100 Баттерфляй)">
             <div class="info_d2">Ниже будут отображаться созданные журналы. Для того, чтобы журнал сохранился, после "Enter" нужно нажать на кнопку "Сохранить"</div>
+            
             <ul class="todos">
               
-                <!--li><i class="fas fa-trash-alt"></i></li-->
-                <!--div id="myDynamicTable"></div-->
-                <table id="myTable" cellpadding="2" cellspacing="2" border="1" onclick="tester()"></table>
             </ul>
 
             <div id= "buttons">
                 <button class="save">Сохранить</button>
             </div>
-        </div>
-
-        <!--div id="elem">
-          <table>
-            <tr>
-            <td rowspan="2" class="want">№</td>
-            <td rowspan="2" class="want">ФИО спортсмена</td>
-            <td rowspan="2" class="want">Год</td>
-            <td rowspan="2" class="want">Старый результат</td>
-            <td colspan = "7" class="want">Тренировки</td> 
-            <td rowspan="2" class="want">Лучший результат</td>
-            <td rowspan="2" class="want">Стабильность</td>
-            <td rowspan="2" class="want">Прогресс</td>
-            <td rowspan="2" class="want">Шанс</td>
-            </tr>
-            <tr>
-            <td>12:11</td>
-            <td>12:11</td>
-            <td>12:11</td>
-            <td>12:11</td>
-            <td>12:11</td>
-            <td>12:11</td>
-            <td>12:11</td>
-            </tr>
-            <tr>
-            <td>1</td>
-            <td>осущшу щосщзусу щовзщув</td>
-            <td>11:11</td>
-            <td>11:11</td>
-            <td>11:11</td>
-            <td>11:11</td>
-            <td>11:11</td>
-            <td>11:11</td>
-            <td>11:11</td>
-            <td>11:11</td>
-            <td>11:11</td>
-            <td>11:11</td>
-            <td>11:11</td>
-            <td>11:11</td>
-            <td>11:11</td>
-            </tr>
-            </table>
-        </div-->
-
-      
-          
+        </div>  
 
         </div>  
     
@@ -106,6 +59,40 @@
     <footer>
 
     </footer>
+
+    <form method="post" action="">
+      <table id="dynamic" class="table_dir">
+        <tr>
+          <th scope="col">ФИО спортсмена</th>
+          <th scope="col">Год</th>
+          <th scope="col">Старый результат</th>
+          <th scope="col" colspan="7">Тренировки</th>
+          <th scope="col">Лучший результат</th>
+          <th scope="col">Стабильность</th>
+          <th scope="col">Прогресс</th>
+          <th scope="col">Шанс</th>
+          <th scope="col">&nbsp;</th>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>&nbsp;</td>
+        </tr>
+      </table>
+    </form>
+ 
 
     <script src="script.js"></script>
     <script src="listDiaries.js"></script>
