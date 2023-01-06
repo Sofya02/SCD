@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900'
+    rel='stylesheet' type='text/css'>
+    <link href="style.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="list_st.css" rel="stylesheet" type="text/css" media="all" />
+    <title>Дневник тренера по плаванию</title>
+  </head>
+  <body>
+    <img src = "icons/swimming.png" class = "swimmer">
+    <header>
+      <div class="container">
+        <nav class="top-menu">
+          <div class="navbar-logo" href="index.html">
+              <img src="icons/логотип.png">
+              <h1>Swimming Coach's Diary</h1>
+          </div>
+          <div class="menu-main">
+            <li class="top"><a class="topt" href="index.html">Главная</a></li>
+            <li class="top"><a class="topt" href="create_profile_swimmer.html">Создать пловца</a></li>
+            <li class="top"><a class="topt" href="list_of_swimmers.html">Список пловцов</a></li>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <div class="main">
+      <div class="container">
+      
+        <div class="info_d">
+          Бассейн(м): 25 и 50;
+          Дистанция(м): 50, 100, 200, 400, 800,1500;
+          Стиль: Вольный, На спине, Брасс, Баттерфляй, Комплексное плавание
+        </div>
+        <div class="anketa2">
+
+          <!--div id="list"></div-->
+          <H2 class="name">Список журналов</H2>
+          <div id = "todo">
+            
+            <input type = "text" placeholder="М/Ж Бассейн (25/50)м, (дистанция: 50/100/200/400/800) Стиль плавания">
+            <div class="info_d2">Ниже будут отображаться созданные журналы. Для того, чтобы журнал сохранился, после "Enter" нужно нажать на кнопку "Сохранить"</div>
+            <ul class="todos">
+              
+                <!--li><i class="fas fa-trash-alt"></i></li-->
+            </ul>
+
+            <div id= "buttons">
+                <button class="save">Сохранить</button>
+            </div>
+        </div>
+
+      
+          
+
+        </div>  
+    
+      </div>
+    </div>
+
+    <footer>
+
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="listDiaries.js"></script>
+    
+   
+  </body>
+</html>

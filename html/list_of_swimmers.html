@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900'
+rel='stylesheet' type='text/css'>
+<link href="style.css" rel="stylesheet" type="text/css" media="all" />
+<link href="list_swim.css" rel="stylesheet" type="text/css" media="all" />
+<script src="jquery-3.6.1.min.js"></script>
+<title>Список пловцов</title>
+</head>
+<body>
+<img src = "icons/swimming.png" class = "swimmer">
+<header>
+<div class="container">
+<nav class="top-menu">
+<div class="navbar-logo" href="">
+<img src="icons/логотип.png">
+<h1>Swimming Coach's Diary</h1>
+</div>
+<div class="menu-main">
+    <li class="top"><a class="topt" href="index.html">Главная</a></li>
+    <li class="top"><a class="topt" href="create_profile_swimmer.html">Создать пловца</a></li>
+    <li class="top"><a class="topt" href="list_of_swimmers.html">Список пловцов</a></li>
+  </div>
+</nav>
+</div>
+</header>
+
+<div class="main">
+<div class="container">
+<a href="index.html"><img src = "icons/back_arrow.png" class="back_arrow"></a>
+<input type="text" id="inputSearch" placeholder="Search.." title="Type in a category">
+<div class="anketa"><H2>Список пловцов</H2>
+
+    <table border="1" id="table">
+        <tr class="first">
+        <td>Фамилия</td>
+         <td>Имя</td>
+         <td>Отчество</td>
+         <td>Год рождения</td>
+         <td>Пол</td>
+         <td>Телефон</td>
+         <td>Город</td>
+        </tr>
+        <tbody id="tablebody"></tbody>
+       </table>
+
+
+</div>
+
+
+</div>
+
+</div>
+
+
+
+<footer>
+<div class="container">
+
+
+
+</div>
+</footer>
+<script src="create_profile.js"></script>
+<script>
+    
+function tableSearch() {
+    var phrase = document.getElementById('search-text');
+    var table = document.getElementById('info-table');
+    var regPhrase = new RegExp(phrase.value, 'i');
+    var flag = false;
+    for (var i = 1; i < table.rows.length; i++) {
+        flag = false;
+        for (var j = table.rows[i].cells.length - 1; j >= 0; j--) {
+            flag = regPhrase.test(table.rows[i].cells[j].innerHTML);
+            if (flag) break;
+        }
+        if (flag) {
+            table.rows[i].style.display = "";
+        } else {
+            table.rows[i].style.display = "none";
+        }
+
+    }
+}
+
+</script>
+</body>
+</html>
