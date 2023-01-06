@@ -27,11 +27,12 @@ input.addEventListener("keypress",function(keyPressed){
     icon.classList.add('fas', 'fa-trash-alt');
     spanElement.append(icon);
     ul.appendChild(li).append(spanElement,newTodo);
+    //tableCreate();///добавление таблицы исправить
+    //addTable();
     
     }
     
 });
-
 
 //сохраняем состояние todolist, чтобы пользователь мог получить к нему доступ позже
 saveBtn.addEventListener('click',function(){
@@ -39,8 +40,20 @@ saveBtn.addEventListener('click',function(){
   
 });
 
-
 //загружаем список
 loadTodo();
 
+
+function tableCreate() {
+  const body = document.body,
+        tbl = document.createElement('table');
+  for (let i = 0; i < 10; i++) {
+    const tr = tbl.insertRow();
+    for (let j = 0; j < 15; j++) {
+        const td = tr.insertCell();
+    }
+  }
+  body.appendChild(tbl);
+}
+tableCreate();
 

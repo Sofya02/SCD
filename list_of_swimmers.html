@@ -30,8 +30,14 @@ rel='stylesheet' type='text/css'>
 <div class="main">
 <div class="container">
 <a href="index.html"><img src = "icons/back_arrow.png" class="back_arrow"></a>
-<input type="text" id="inputSearch" placeholder="Search.." title="Type in a category">
+
 <div class="anketa"><H2>Список пловцов</H2>
+
+    <div class="info_d3">
+        Сортировка в алфавитном после обновления страницы сбрасывается
+      </div>
+
+    <p><button onclick="sortTable()">Отсортировать в алфавитном порядке</button></p>
 
     <table border="1" id="table">
         <tr class="first">
@@ -65,27 +71,40 @@ rel='stylesheet' type='text/css'>
 </footer>
 <script src="create_profile.js"></script>
 <script>
-    
-function tableSearch() {
-    var phrase = document.getElementById('search-text');
-    var table = document.getElementById('info-table');
-    var regPhrase = new RegExp(phrase.value, 'i');
-    var flag = false;
-    for (var i = 1; i < table.rows.length; i++) {
-        flag = false;
-        for (var j = table.rows[i].cells.length - 1; j >= 0; j--) {
-            flag = regPhrase.test(table.rows[i].cells[j].innerHTML);
-            if (flag) break;
+    function sortTable() {
+      var table, rows, switching, i, x, y, shouldSwitch;
+      table = document.getElementById("table");
+      switching = true;
+      /*Make a loop that will continue until
+      no switching has been done:*/
+      while (switching) {
+        //start by saying: no switching is done:
+        switching = false;
+        rows = table.getElementsByTagName("TR");
+        /*Loop through all table rows (except the
+        first, which contains table headers):*/
+        for (i = 1; i < (rows.length - 1); i++) {
+          //start by saying there should be no switching:
+          shouldSwitch = false;
+          /*Get the two elements you want to compare,
+          one from current row and one from the next:*/
+          x = rows[i].getElementsByTagName("TD")[0];
+          y = rows[i + 1].getElementsByTagName("TD")[0];
+          //check if the two rows should switch place:
+          if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+            //if so, mark as a switch and break the loop:
+            shouldSwitch = true;
+            break;
+          }
         }
-        if (flag) {
-            table.rows[i].style.display = "";
-        } else {
-            table.rows[i].style.display = "none";
+        if (shouldSwitch) {
+          /*If a switch has been marked, make the switch
+          and mark that a switch has been done:*/
+          rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+          switching = true;
         }
-
+      }
     }
-}
-
-</script>
+    </script>
 </body>
 </html>

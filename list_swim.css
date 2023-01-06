@@ -54,3 +54,32 @@ tr.first {
 input{
   margin-left: 900px;
 }
+
+
+.info_d3{
+
+  padding: 2px; /* Поля */
+  background: #E5D3BD; /* Цвет фона */
+  border: 2px solid #E81E25; /* Параметры рамки */
+  text-align: center;
+  height: 20px;
+  width: 995px;
+  margin-left: 40px;
+}
+
+button{
+  background-color:rgb(0, 33, 134); /* Green */
+  border: none;
+  color: white;
+  padding: 8px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: outside;
+  font-size: 15px;
+  border-radius:4px;
+  font-family:Bad Script;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  cursor: pointer;
+  margin-left: 760px;
+}
