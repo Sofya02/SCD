@@ -124,7 +124,7 @@ form{
 
 .anketa2
 {
-  margin-top:100px;
+  margin-top:110px;
 
 }
 
@@ -147,6 +147,22 @@ legend
   margin-left: 200;
 }
 
+.info_d{
+
+  padding: 20px; /* Поля */
+  background: #E5D3BD; /* Цвет фона */
+  border: 2px solid #E81E25; /* Параметры рамки */
+  text-align: center;
+}
+
+.info_d2{
+
+  padding: 2px; /* Поля */
+  background: #89bdde; /* Цвет фона */
+  border: 2px solid #66abe7; /* Параметры рамки */
+  text-align: center;
+ 
+}
 
 
 
