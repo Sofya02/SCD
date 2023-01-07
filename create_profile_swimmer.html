@@ -36,8 +36,8 @@
    <form name="form" action="list_of_swimmers.html">
      <table>
        <tr>
-         <td><label for="familyAndyear">ФИО и год:</label></td>
-         <td><input name="familyAndyear" id="familyAndyear" size="30"  placeholder="Введите ФИО спортсмена и год" autocomplete="off"/></td>
+         <td><label for="familyYearGenderPhoneCity">Данные о пловце:</label></td>
+         <td><input name="familyYearGenderPhoneCity" id="familyYearGenderPhoneCity" size="70"  placeholder="Введите ФИО спортсмена, год, пол, телефон, город" autocomplete="off"/></td>
        </tr>
        <!--tr>
           <td><label for="username">Имя:</label></td>
@@ -50,7 +50,7 @@
        <tr>
          <td><label for="year">Год рождения:</label></td>
          <td>  <input name="year" id="year" type="number" min="1900" max="2020" step="1" value="2020" /></td>
-       </tr-->
+       </tr>
        <tr>
         <td><label for="gender">Пол:</label></td>
         <td><input TYPE="radio" name="gender" id="gender" VALUE ="Мужчина" checked><img src="icons/male-gender.png" class = "gender">
@@ -64,7 +64,7 @@
          <td><label for="city">Город:</label></td>
          <td>  <input name="city" id="city" placeholder="Введите город" SIZE=30 autocomplete="off" /></td>
        </tr>
-       <tr>
+       <tr-->
          <td>
          </td>
          <td>
@@ -80,13 +80,13 @@
   <div class="tab">
     <table border="1" id="table" >
       <tr class="first">
-      <td>ФИО спортсмена и год</td>
+      <td>ФИО спортсмена, год, пол, телефон, город</td>
       <!--td>Имя</td>
       <td>Отчество</td>
-      <td>Год рождения</td-->
+      <td>Год рождения</td>
       <td>Пол</td>
       <td>Телефон</td>
-      <td>Город</td>
+      <td>Город</td-->
       </tr>
       <tbody id="tablebody"></tbody>
     </table>
@@ -100,8 +100,8 @@
       </div>
     </footer>
 
- 
-
+   
+   
 
     <script src="create_profile.js"></script>
     
