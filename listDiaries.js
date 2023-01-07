@@ -48,6 +48,16 @@ input.addEventListener("keypress",function(keyPressed){
      table.setAttribute("id", i + 1);
     }
 
+    var x=document.getElementById('1').rows[0].cells;
+    x[0].innerHTML="ФИО спортсмена и год";
+    x[1].innerHTML="Старый результат";
+    x[2].innerHTML="Тренировки";
+    x[3].innerHTML="Лучший результат";
+    x[4].innerHTML="Стабильность";
+    x[5].innerHTML="Прогресс";
+    x[6].innerHTML="Шанс";
+
+
   
     }
     
