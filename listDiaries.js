@@ -21,7 +21,8 @@ input.addEventListener("keypress",function(keyPressed){
     var spanElement = document.createElement("span");
     var icon = document.createElement("i");
     var t = document.createElement("table");
-        
+   // document.querySelector("table").id = "new";
+    var info = ["ФИО студента и год","Старый результат", "Тренировки", "Лучший результат", "Стабильность", "Прогресс", "Шанс"];
     var newTodo = this.value;
     this.value = " " ;
         
@@ -30,11 +31,22 @@ input.addEventListener("keypress",function(keyPressed){
     ul.appendChild(li).append(spanElement,newTodo);
     for (let i = 0; i < 10; i++) {
         const tr = t.insertRow();
-        for (let j = 0; j < 15; j++) {
-            const td = tr.insertCell();
+ 
+        for (let j = 0; j < 7; j++) {
+           const td = tr.insertCell();
         }
     }
     li.appendChild(t);
+
+    // Получение элемента таблицы
+     var tables = document.getElementsByTagName("table");
+    // Цикл по таблицам
+    for (var i = 0; i < tables.length; i++) {
+     // Получаем i-ю таблицу
+     var table = tables[i];
+     // Установить идентификатор динамически
+     table.setAttribute("id", i + 1);
+    }
 
   
     }
@@ -46,40 +58,9 @@ saveBtn.addEventListener('click',function(){
   localStorage.setItem('todoList',ul.innerHTML );
 });
 
-/*/создание таблицы
-createTable.addEventListener('click',function(){
-   // localStorage.setItem('todoList',ul.innerHTML );
-
-    //var table = document.createElement("table");
-
-    const body = document.body,
-    tbl = document.createElement('table');
-    for (let i = 0; i < 10; i++) {
-        const tr = tbl.insertRow();
-        for (let j = 0; j < 15; j++) {
-            const td = tr.insertCell();
-        }
-    }
-body.appendChild(tbl);
-  });
-  */
-
 //загружаем список
 loadTodo();
 
-
-/*function tableCreate() {
-  const body = document.body,
-        tbl = document.createElement('table');
-  for (let i = 0; i < 10; i++) {
-    const tr = tbl.insertRow();
-    for (let j = 0; j < 15; j++) {
-        const td = tr.insertCell();
-    }
-  }
-  body.appendChild(tbl);
-}
-*/
 /*
 function tableMaker()
 {
