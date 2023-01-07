@@ -21,8 +21,7 @@ input.addEventListener("keypress",function(keyPressed){
     var spanElement = document.createElement("span");
     var icon = document.createElement("i");
     var t = document.createElement("table");
-   // document.querySelector("table").id = "new";
-    var info = ["ФИО студента и год","Старый результат", "Тренировки", "Лучший результат", "Стабильность", "Прогресс", "Шанс"];
+
     var newTodo = this.value;
     this.value = " " ;
         
@@ -32,7 +31,7 @@ input.addEventListener("keypress",function(keyPressed){
     for (let i = 0; i < 10; i++) {
         const tr = t.insertRow();
  
-        for (let j = 0; j < 7; j++) {
+        for (let j = 0; j < 10; j++) {
            const td = tr.insertCell();
         }
     }
@@ -46,18 +45,23 @@ input.addEventListener("keypress",function(keyPressed){
      var table = tables[i];
      // Установить идентификатор динамически
      table.setAttribute("id", i + 1);
+
     }
-
+        
+    //Формирование названий столбцов
     var x=document.getElementById('1').rows[0].cells;
-    x[0].innerHTML="ФИО спортсмена и год";
+    x[0].innerHTML="Данные о спортсмене";
     x[1].innerHTML="Старый результат";
-    x[2].innerHTML="Тренировки";
-    x[3].innerHTML="Лучший результат";
-    x[4].innerHTML="Стабильность";
-    x[5].innerHTML="Прогресс";
-    x[6].innerHTML="Шанс";
-
-
+    x[2].innerHTML="Тренировка1";
+    x[3].innerHTML="Тренировка2";
+    x[4].innerHTML="Тренировка3";
+    x[5].innerHTML="Тренировка4";
+    x[6].innerHTML="Тренировка5";
+    x[7].innerHTML="Лучший результат";
+    x[8].innerHTML="Стабильность";
+    x[9].innerHTML="Прогресс";
+    x[10].innerHTML="Шанс";
+    
   
     }
     
@@ -115,6 +119,45 @@ function tableMaker()
 
 */
 
+// function createButton(context, func) {
+//     var button = document.createElement("input");
+//     button.type = "button";
+//     button.value = "Добавить пловца";
+//     button.onclick = func;
+//     context.appendChild(button);   
+// }
+// window.onload = function() {
+//     createButton(document.body, function() {
+//         highlight(this.parentNode.childNodes[1]);
+//     });
+// };
 
 
+/*
 
+var sel = document.createElement('select');
+      sel.name = 'drop1';
+      sel.id = 'Select1';
+
+      var cars = [
+        "volvo",
+        "saab",
+        "mercedes",
+        "audi"
+      ];
+
+      var options_str = "";
+
+      cars.forEach( function(car) {
+        options_str += '<option value="' + car + '">' + car + '</option>';
+      });
+
+      sel.innerHTML = options_str;
+
+
+    
+      var per = document.getElementById('1').rows[1].cells;
+      per[0].appendChild(sel);
+
+
+*/ 

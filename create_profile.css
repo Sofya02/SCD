@@ -23,6 +23,7 @@ legend
 }
 
 form{
+  margin-top:10px ;
   margin-left: 300px;
 }
 
@@ -35,4 +36,16 @@ form{
 .tab{
   display: none;
 }
+
+.info_d3{
+
+  padding: 2px; /* Поля */
+  background: #E5D3BD; /* Цвет фона */
+  border: 2px solid #E81E25; /* Параметры рамки */
+  text-align: center;
+  height: 20px;
+  width: 995px;
+  margin-left: 40px;
+}
+
 

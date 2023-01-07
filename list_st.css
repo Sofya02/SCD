@@ -50,7 +50,7 @@ input{
   }
 
   ul{
-    font-size: 20px;
+    font-size: 16px;
     color:rgb(7, 43, 59);
   }
  
@@ -60,13 +60,15 @@ input{
 {
   margin-top: 10px;
   margin-left: -60px;
+  
 }
 
 table{
   border-collapse: collapse;
   background-color: #fff;
-  max-width: 1080px;
+  max-width: 900px;
   text-align: center;
+  margin-left: -10px;
 }
 th, td{
   padding: 10px 10px 10px 10px;
@@ -81,5 +83,5 @@ tr:nth-child(odd) { background-color: #fff; }
 
 .view
 {
-  padding-left: 370px;
+  padding-left: 250px;
 }
