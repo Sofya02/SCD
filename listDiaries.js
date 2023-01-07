@@ -61,9 +61,13 @@ input.addEventListener("keypress",function(keyPressed){
     x[8].innerHTML="Стабильность";
     x[9].innerHTML="Прогресс";
     x[10].innerHTML="Шанс";
-    
-  
+
+    //активация ячейки
+    var a=document.getElementById('1').rows[2].cells;
+    for (var i = 0; i < a.length; i++) {
+        x[0].innerHTML="Время";
     }
+}
     
 });
 
@@ -75,89 +79,3 @@ saveBtn.addEventListener('click',function(){
 //загружаем список
 loadTodo();
 
-/*
-function tableMaker()
-{
-
-  var student;
-  for (var j = 0; j < 10; j++) {
-      student = {
-          number: "№" + j,
-          fio: "ФИО спортсмена" + j,
-          year: "Год" + j,
-          lastRes: "Старый результата" + j,
-          numC: "Тренировки" + j,
-          bestRes: "Лучший результат" + j,
-          stab: "Стабильность" + j,
-          progress: "Прогресс" + j,
-          chance: "Шанс" + j,
-      };
-      var table = document.getElementById("myTable");
-      var row = table.insertRow(j);
-      var cell1 = row.insertCell(0);
-      var cell2 = row.insertCell(1);
-      var cell3 = row.insertCell(2);
-      var cell4 = row.insertCell(3);
-      var cell5 = row.insertCell(4);
-      var cell6 = row.insertCell(5);
-      var cell7 = row.insertCell(6);
-      var cell8 = row.insertCell(7);
-      var cell9 = row.insertCell(8);
-  
-      cell1.innerHTML = student.number,
-      cell2.innerHTML = student.fio,
-      cell3.innerHTML = student.year;
-      cell4.innerHTML = student.lastRes,
-      cell5.innerHTML = student.numC,
-      cell6.innerHTML = student.bestRes;
-      cell7.innerHTML = student.stab,
-      cell8.innerHTML = student.progress,
-      cell9.innerHTML = student.chance;
-  }
-  
-}
-
-*/
-
-// function createButton(context, func) {
-//     var button = document.createElement("input");
-//     button.type = "button";
-//     button.value = "Добавить пловца";
-//     button.onclick = func;
-//     context.appendChild(button);   
-// }
-// window.onload = function() {
-//     createButton(document.body, function() {
-//         highlight(this.parentNode.childNodes[1]);
-//     });
-// };
-
-
-/*
-
-var sel = document.createElement('select');
-      sel.name = 'drop1';
-      sel.id = 'Select1';
-
-      var cars = [
-        "volvo",
-        "saab",
-        "mercedes",
-        "audi"
-      ];
-
-      var options_str = "";
-
-      cars.forEach( function(car) {
-        options_str += '<option value="' + car + '">' + car + '</option>';
-      });
-
-      sel.innerHTML = options_str;
-
-
-    
-      var per = document.getElementById('1').rows[1].cells;
-      per[0].appendChild(sel);
-
-
-*/ 
