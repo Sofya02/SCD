@@ -48,13 +48,18 @@ input{
     transition-duration: 0.4s;
     cursor: pointer;
   }
+
+  ul{
+    font-size: 20px;
+    color:rgb(7, 43, 59);
+  }
  
   
   /*Таблица*/
 .table_dir
 {
-  margin-top: 40px;
-  margin-left: -140px;
+  margin-top: 10px;
+  margin-left: -60px;
 }
 
 table{
@@ -64,13 +69,17 @@ table{
   text-align: center;
 }
 th, td{
-  padding: 3px 7px 2px 7px;
+  padding: 10px 10px 10px 10px;
   border: 1px solid rgb(7, 43, 59);
 }
   
 th {
   text-align: left;
-  padding: 5px;
+  padding: 10px;
 }
 tr:nth-child(odd) { background-color: #fff; }
 
+.view
+{
+  padding-left: 370px;
+}
