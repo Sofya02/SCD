@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', function() {
     document.form.addEventListener('submit', function(event) {
         event.preventDefault();
         var form = this;
-        var item = ["family" , /*"username" , "patronymic",*/"year","gender","phone","city"].map(function(name) {
+        var item = ["familyAndyear" , /*"username" , "patronymic","year"*/,"gender","phone","city"].map(function(name) {
           return form[name].value
         });
         form.reset();
