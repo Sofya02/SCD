@@ -66,15 +66,20 @@ input{
 table{
   border-collapse: collapse;
   background-color: #fff;
-  max-width: 900px;
+  max-width: 1000px;
   text-align: center;
   margin-left: -10px;
 }
-th, td{
-  padding: 10px 10px 10px 10px;
+td{
+  padding: 10px;
   border: 1px solid rgb(7, 43, 59);
 }
-  
+
+.f_d{
+  width: 500px;
+  margin-left: 220px;
+}
+/*  
 th {
   text-align: left;
   padding: 10px;
@@ -84,4 +89,4 @@ tr:nth-child(odd) { background-color: #fff; }
 .view
 {
   padding-left: 250px;
-}
+}*/
