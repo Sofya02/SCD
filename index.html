@@ -6,6 +6,9 @@
     rel='stylesheet' type='text/css'>
     <link href="style.css" rel="stylesheet" type="text/css" media="all" />
     <link href="list_st.css" rel="stylesheet" type="text/css" media="all" />
+    <script src="jquery-3.6.1.min.js"></script>
+    <script src="jquery.csvToTable.js"></script>
+    <script src="jquery.tablesorter.dev.js"></script>
     <title>Дневник тренера по плаванию</title>
   </head>
   <body>
@@ -31,6 +34,7 @@
           Бассейн(м): 25 и 50;
           Дистанция(м): 50, 100, 200, 400, 800,1500;
           Стиль: Вольный, На спине, Брасс, Баттерфляй, Комплексное плавание
+          <p>Пример для заполнения таблицы (с работающими формулами: лучший результат("=МИН(C2:J2)"), стабильность("=СУММ(D2:J2)/7"), прогресс("=100-((C2+K2+J2)/3)"), шанс("=(L2+M2)/2")):  <a href="Example.xlsx" download>Скачать файл</a>
         </div>
         
         <div class="anketa2">
@@ -48,7 +52,6 @@
 
             <div id= "buttons">
                 <button class="save">Сохранить</button>
-                <button class="editTable">Редактировать таблицу</button>
             </div>
         </div>  
 
@@ -59,38 +62,14 @@
 
     <footer>
 
+      <input type="file" accept=".csv" id="picker" class="f_d">
+      <table id="table"></table>
+
     </footer>
 
-    <div class="view">Вид таблицы
-      <table id="dynamic" class="table_dir">
-        <tr>
-          <th scope="col">Данные о спортсмене</th>          
-          <th scope="col">Старый результат</th>
-          <th scope="col">Тренировка1</th>
-          <th scope="col">Тренировка1</th>
-          <th scope="col">Тренировка3</th>
-          <th scope="col">Тренировка4</th>
-          <th scope="col">Тренировка5</th>
-          <th scope="col">Лучший результат</th>
-          <th scope="col">Стабильность</th>
-          <th scope="col">Прогресс</th>
-          <th scope="col">Шанс</th>   
-        </tr>
-        <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-      </table>
-    </div>
+   
+   
+
 
     <script src="script.js"></script>
     <script src="listDiaries.js"></script>
